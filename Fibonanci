@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class Fibonacci
+{
+	public static void main(String args[ ])
+	{
+		int n,prev=0,curnt=1,res=0;	
+		System.out.print("Enter a number upto which fibanocci series to be printed: ");
+		Scanner s=new Scanner(System.in);
+		n=s.nextInt();
+		if(n==1)
+		System.out.print(prev+" ");
+
+
+		if(n==2)
+		System.out.print(prev+" "+curnt+" ");
+		if(n>=3)
+		{
+			System.out.print(prev+" "+curnt+" ");
+
+			for(;curnt<=n;)
+			{
+				res=curnt+prev;
+				System.out.print(res+" ");
+				prev=curnt;
+				curnt=res;
+			}
+		}
+	}
+}
+	
